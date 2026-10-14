@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ash Beauty Services | Nails, Lashes, Facials in Navua &amp; Suva</title>
+<meta name="description" content="Gel polish, acrylics, pedicure, facials, lash extensions, waxing and threading in Navua and Suva. Home service available. Book on WhatsApp.">
+<meta name="theme-color" content="#120d0f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Ash Beauty Services, home">Ash</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav" class="nav">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#booking">Booking</a>
+      <a href="#contact">Contact</a>
+      <a class="btn small" href="#booking">Book now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="sparkles" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <h1 class="brand">Ash</h1>
+        <p class="brand-sub">Beauty Services</p>
+        <div class="divider" aria-hidden="true"><i></i><b>&#10048;</b><i></i></div>
+        <p class="tagline">Beauty that speaks for you</p>
+        <p class="hero-copy">Nails, lashes, facials, waxing and threading, done with care in Navua and Suva. We can also come to your home.</p>
+        <div class="actions">
+          <a class="btn" href="#booking">Book an appointment</a>
+          <a class="btn ghost" href="#services">See prices</a>
+        </div>
+        <ul class="quick">
+          <li>&#128205; Navua &amp; Suva</li>
+          <li>&#127968; Home service</li>
+          <li>&#128222; 235 9716</li>
+        </ul>
+      </div>
+      <div class="hero-photos" aria-hidden="false">
+        <div class="ring r1"><img id="h1" alt="Pink nails with crystal detail"></div>
+        <div class="ring r2"><img id="h2" alt="Lash extensions"></div>
+        <div class="ring r3"><img id="h3" alt="Relaxing facial"></div>
+        <div class="ring r4"><img id="h4" alt="French tip nails"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="why">
+    <div class="wrap why-grid">
+      <div><span class="ic">&#127968;</span><h3>We come to you</h3><p>Home service available in Navua and Suva.</p></div>
+      <div><span class="ic">&#10024;</span><h3>Full beauty menu</h3><p>Nails, lashes, facials, waxing and threading.</p></div>
+      <div><span class="ic">&#128176;</span><h3>Fair prices</h3><p>Services start from just F$3.</p></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <h2 class="title">Services and prices</h2>
+      <p class="lead">All prices are in Fiji dollars. Tap <b>Add</b> to put a service in your booking.</p>
+      <div id="serviceGroups"></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section alt" id="gallery">
+    <div class="wrap">
+      <h2 class="title">Our work</h2>
+      <p class="lead">Tap any photo to see it bigger.</p>
+      <div class="gallery" id="gal"></div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="title">How booking works</h2>
+      <ol class="steps">
+        <li><b>Choose</b><span>Pick your services and a date.</span></li>
+        <li><b>Send</b><span>Tap the button. WhatsApp opens with your details ready.</span></li>
+        <li><b>Confirm</b><span>Ash replies to confirm your time.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section alt" id="booking">
+    <div class="wrap booking-grid">
+      <div class="booking-info">
+        <h2 class="title">Book an appointment</h2>
+        <p class="lead">Fill in the form and send it on WhatsApp. Your booking is confirmed once Ash replies.</p>
+        <div class="summary" aria-live="polite">
+          <h3>Your selection</h3>
+          <ul id="sumList"><li class="empty">No services chosen yet.</li></ul>
+          <div class="total"><span>Estimated total</span><strong id="sumTotal">F$0</strong></div>
+        </div>
+      </div>
+
+      <form id="bookForm" class="form" novalidate>
+        <fieldset>
+          <legend>1. Choose services</legend>
+          <div class="chips" id="chips"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Date and time</legend>
+          <div class="row">
+            <div><label for="date">Preferred date</label><input id="date" type="date" required></div>
+            <div><label for="time">Preferred time</label><input id="time" type="time" required></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Where</legend>
+          <div class="row">
+            <div>
+              <label for="area">Area</label>
+              <select id="area"><option>Suva</option><option>Navua</option><option>Other</option></select>
+            </div>
+            <div>
+              <label for="where">Service type</label>
+              <select id="where">
+                <option value="Home service">Home service</option>
+                <option value="At Ash's place">At Ash's place</option>
+              </select>
+            </div>
+          </div>
+          <label for="address" id="addrLabel">Address or landmark</label>
+          <input id="address" autocomplete="street-address" placeholder="Street, village or nearby landmark">
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Your details</legend>
+          <div class="row">
+            <div><label for="name">Name</label><input id="name" required autocomplete="name"></div>
+            <div><label for="phone">Phone number</label><input id="phone" type="tel" required autocomplete="tel"></div>
+          </div>
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" rows="3" placeholder="Nail colour, design ideas, number of people..."></textarea>
+        </fieldset>
+
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn wa" type="submit">Send booking on WhatsApp</button>
+        <p class="hint">Or call <a href="tel:+6792359716">235 9716</a></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" class="footer">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="logo big">Ash</div>
+      <p class="brand-sub small">Beauty Services</p>
+      <p class="muted">Beauty that speaks for you</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="tel:+6792359716">Phone: 235 9716</a></p>
+      <p><a id="waLink" href="#" target="_blank" rel="noopener">WhatsApp us</a></p>
+      <p><a href="https://www.instagram.com/ash._.beauty._.services" target="_blank" rel="noopener">Instagram: ash._.beauty._.services</a></p>
+    </div>
+    <div>
+      <h4>Where</h4>
+      <p>Navua and Suva</p>
+      <p>Home service also provided</p>
+    </div>
+  </div>
+  <p class="thanks">Thank you for choosing Ash Beauty Services &#9825;</p>
+</footer>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="#fff" d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.8 6.5L3 29l6.7-1.7A13 13 0 0 0 16 29c7.2 0 13-5.8 13-13S23.200 3 16 3zm0 23.700c-2 0-3.900-.6-5.600-1.600l-.4-.2-4 1 1.100-3.900-.3-.4A10.700 10.700 0 1 1 16 26.700zm5.900-8c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.200-.2-.3 0-.5.100-.7l.5-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.6l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400-.3.300-1.200 1.200-1.200 2.900s1.200 3.400 1.400 3.600c.2.200 2.400 3.700 5.900 5.100.8.4 1.500.6 2 .7.8.3 1.600.2 2.200.1.700-.1 1.900-.8 2.200-1.500.3-.7.3-1.400.2-1.500-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<div class="lightbox" id="lb" aria-hidden="true">
+  <button class="lb-x" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+  <img id="lbImg" alt="">
+  <button class="lb-nav next" id="lbNext" aria-label="Next photo">&#8250;</button>
+</div>
+
+<script src="images.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
